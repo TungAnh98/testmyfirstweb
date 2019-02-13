@@ -1,18 +1,20 @@
 const express = require("express");
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 8000;
-}
-var app = express();
+// let port = process.env.PORT;
 
-app.get('/',(req,res)=>{
-    res.send({
-        name:'Andrew',
-        likes: ["Bikings","Swimming"]
-        
-    });
+// if (port == null || port == "") {
+//   port = 8000;
+// }
+
+const hbs = require('hbs');
+var app = express();
+app.use(express.static(__dirname + '/public'));
+app.get('/', (req, res) => {
+  res.send("Tung Anh");
 });
-app.get('/bad',(req,res)=>{
-    
+app.get('/help', (req, res) => {
+
 });
-app.listen(port);
+app.listen(4000, () => {
+  console.log("Port is openning");
+});
+
