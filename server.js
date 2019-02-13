@@ -2,7 +2,7 @@ const express = require("express");
 let port = process.env.PORT;
 
 if (port == null || port == "") {
-  port = 8080;
+  port = 8000;
 }
 
 const hbs = require('hbs');
